@@ -121,6 +121,7 @@
                         <th scope="col">id</th>
                         <th scope="col">title</th>
                         <th scope="col">task</th>
+                        <th scope="col"></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -130,6 +131,14 @@
                             <th scope="row">{{ i.id }}</th>
                             <td>{{ i.title }}</td>
                             <td>{{ i.task }}</td>
+                            <td>
+                                <form method="post" action="http://127.0.0.1:8000/{{ i.id }}">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-danger">
+                                        delete
+                                    </button>
+                                </form>
+                            </td>
                         </tr>
                     {% endfor %}
                     {% else %}

@@ -10,7 +10,7 @@ class CompanyDBForm(ModelForm):
             "title": TextInput(attrs={
                 'class': 'form-control',
                 'placeholder': 'Enter name'
-        }),
+            }),
             "task": Textarea(attrs={
                 'class': 'form-control',
                 'placeholder': 'Enter description'

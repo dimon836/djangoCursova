@@ -23,3 +23,9 @@ def add(request):
     form = CompanyDBForm()
     context = {'title': 'Добавление нового рабочего', 'form': form}
     return render(request, 'main/add.html', context)
+
+
+def delete(request, id):
+    emp = CompanyDB.objects.get(pk=id)
+    emp.delete()
+    return redirect('/')
