@@ -1,18 +1,37 @@
 {% extends 'main/base.html'%}
 
 {% block title %}
-{{ title }}
+    {{ title }}
 {% endblock %}
 
 {% block content %}
-<div class="container">
-    <h1>Добавление участника</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.title }}<br>
-        {{ form.task }}<br>
-        <button type="submit" class="btn btn-success">Добавить</button>
-        <span>{{ error }}</span>
-    </form>
-</div>
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+    <div class="container">
+        <h1>Управление данными</h1>
+            <li>
+                <p><a href="{% url 'month' %}">Month</a></p>
+                <p><a href="{% url 'production' %}">Production rate</a></p>
+                <p><a href="{% url 'position' %}">Position employer</a></p>
+                <p><a href="{% url 'history' %}">History promotions</a></p>
+                <p><a href="{% url 'coupon' %}">Coupon</a></p>
+                <p><a href="{% url 'machine' %}">Working machine</a></p>
+                <p><a href="{% url 'oil' %}">Oil change</a></p>
+                <p><a href="{% url 'breaks' %}">Machine breakdowns</a></p>
+                <p><a href="{% url 'subdivision' %}">Subdivision</a></p>
+                <p><a href="{% url 'table' %}">Table sheet</a></p>
+                <p><a href="{% url 'employer' %}">Employer</a></p>
+                <p><a href="{% url 'trip' %}">Trip</a></p>
+                <p><a href="{% url 'hospital' %}">Hospital trip</a></p>
+                <p><a href="{% url 'vacation' %}">Vacation</a></p>
+            </li>
+
+        {#    <form method="post">#}
+        {#        {% csrf_token %}#}
+        {#        {{ form.title }}<br>#}
+        {#        {{ form.task }}<br>#}
+        {#        <button type="submit" class="btn btn-success">Добавить</button>#}
+        {#        <span>{{ error }}</span>#}
+        {#    </form>#}
+    </div>
+</main>
 {% endblock %}

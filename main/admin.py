@@ -1,9 +1,8 @@
 from django.contrib import admin
-from .models import CompanyDB, Month, ProductionRate, PositionEm, HistoryPromotions, WorkingMachine, OilChange, \
+from .models import Month, ProductionRate, PositionEm, HistoryPromotions, WorkingMachine, OilChange, \
     MachineBreakdowns, Subdivision, TableSheet, Employer, Trip, Vacation, Coupon, HospitalTrip
 
 
-admin.site.register(CompanyDB)
 admin.site.register(Month)
 admin.site.register(ProductionRate)
 admin.site.register(PositionEm)

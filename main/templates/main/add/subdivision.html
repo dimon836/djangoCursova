@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+    <div class="container">
+        <h1>Добавление подразделение</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form1.name }}<br>
+            {{ form1.id_machine }}<br>
+            <button type="submit" class="btn btn-success">Добавить</button>
+            <span>{{ error }}</span>
+        </form>
+    </div>
+</main>
+{% endblock %}

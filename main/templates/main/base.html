@@ -14,11 +14,93 @@
     <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
         <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="{% url 'home' %}">Главная страница</a>
         <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="{% url 'about' %}">О нас</a>
-        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="{% url 'add' %}">Добавить работника</a>
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="{% url 'add' %}">Добавить в базу</a>
         <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
     </header>
-    {% block content %}{% endblock %}
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'month_' %}">
+                                Month
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'breaks_' %}">
+                                Breaks
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'coupon_' %}">
+                                Coupon
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'employer_' %}">
+                                Employer
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'history_' %}">
+                                History
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'hospital_' %}">
+                                Hospital Trip
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'machine_' %}">
+                                Working Machine
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'oil_' %}">
+                                Oil
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'position_' %}">
+                                Position Rate
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'production_' %}">
+                                Production Employer
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'subdivision_' %}">
+                                Subdivision
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'table_' %}">
+                                Table Sheet
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'trip_' %}">
+                                Trip
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'vacation_' %}">
+                                Vacation
+                            </a>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </nav>
+            {% block content %}{% endblock %}
+        </div>
+    </div>
 </body>
 </html>

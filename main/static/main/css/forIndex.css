@@ -1,0 +1,75 @@
+. add_container{
+
+    top: 250px;
+}
+.main-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 700px;
+    background: black;
+    width: 100%;
+    font-family: Yinmar;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+
+
+}
+
+.main-left ul {
+
+    justify-content: space-around;
+    display: flex;
+    margin-left: 20px;
+    list-style: none;
+    flex-direction: row;
+}
+
+
+.main-left li {
+    margin: 35px;
+}
+
+.main-left a {
+    color: white;
+    text-decoration: none;
+}
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 700px;
+    width: 100%;
+    background: #313131;
+    font-family: Yinmar;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+
+
+}
+
+.main ul {
+
+    justify-content: space-around;
+    display: flex;
+    margin-left: 20px;
+    list-style: none;
+    flex-direction: row;
+}
+
+
+.main li {
+    margin: 35px;
+}
+
+.main a {
+    color: white;
+    text-decoration: none;
+}
+
