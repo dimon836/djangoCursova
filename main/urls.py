@@ -30,6 +30,7 @@ urlpatterns = [
     path('add/breaks', views.breaks, name='breaks'),
     path('view/breaks_', views.breaks_, name='breaks_'),
     path('<id>/breaks', views.delete_breaks, name='delete'),
+    path('<id>/edit_breaks', views.edit_breaks, name='edit'),
 
     path('add/subdivision', views.subdivision, name='subdivision'),
     path('view/subdivision_', views.subdivision_, name='subdivision_'),

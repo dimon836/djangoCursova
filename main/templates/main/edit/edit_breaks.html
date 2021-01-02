@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <div class="container">
+            <h1>Изменение данных таблицы поломок</h1>
+            <form method="POST">
+                {% csrf_token %}
+                <p>
+                    <label>Введите возраст</label><br>
+                    <label>
+                        <input type="date" name="date_breakdown" value="{{ machineBreakdowns.date_breakdown }}" />
+                    </label>
+                </p>
+                <p>
+                    <label>Введите количество поломок</label><br>
+                    <label>
+                        <input type="number" name="num_breakdown" value="{{ machineBreakdowns.num_breakdown }}" />
+                    </label>
+                </p>
+                <p>
+                    <label>Введите растраты</label><br>
+                    <label>
+                        <input type="number" name="cost" value="{{ machineBreakdowns.cost }}" />
+                    </label>
+                </p>
+                <button type="submit" class="btn btn-success">Добавить</button>
+            </form>
+        </div>
+    </main>
+{% endblock %}

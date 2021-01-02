@@ -29,6 +29,12 @@
                             <td>{{ i.cost }}</td>
                             <td>{{ i.id_machine }}</td>
                             <td>
+                                <form method="post" action="http://127.0.0.1:8000/{{ i.id }}/edit_breaks">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-success">
+                                        <span>edit</span>
+                                    </button>
+                                </form>
                                 <form method="post" action="http://127.0.0.1:8000/{{ i.id }}/breaks">
                                     {% csrf_token %}
                                     <button type="submit" class="btn btn-danger">
