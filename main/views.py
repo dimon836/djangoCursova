@@ -25,9 +25,9 @@ def edit_breaks(request, id):
     try:
         machineBreakdown = MachineBreakdowns.objects.get(id=id)
         if request.method == "POST":
-            machineBreakdown.num_breakdown = request.POST.get("num_breakdown")
-            machineBreakdown.date_breakdown = request.POST.get("date_breakdown")
-            machineBreakdown.cost = request.POST.get("cost")
+            machineBreakdown.num_breakdowns = request.POST.get("num_breakdown")
+            machineBreakdown.date_breakdowns = request.POST.get("date_breakdown")
+            machineBreakdown.costs = request.POST.get("cost")
 
             machineBreakdown.save()
             return render(request, 'main/edit/edit_breaks.html')
